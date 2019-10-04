@@ -1,4 +1,3 @@
-
 /**
  * PSet 2.1 - Caesar
  * Written by Sudipto Ghosh for CS50
