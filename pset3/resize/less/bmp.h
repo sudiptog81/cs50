@@ -1,17 +1,16 @@
-// BMP-related data types based on Microsoft's own
-
 #include <stdint.h>
 
+// BMP-related data types based on Microsoft's own
 // aliases for C/C++ primitive data types
 // https://msdn.microsoft.com/en-us/library/cc230309.aspx
-typedef uint8_t  BYTE;
+typedef uint8_t BYTE;
 typedef uint32_t DWORD;
-typedef int32_t  LONG;
+typedef int32_t LONG;
 typedef uint16_t WORD;
 
 // information about the type, size, and layout of a file
 // https://msdn.microsoft.com/en-us/library/dd183374(v=vs.85).aspx
-typedef struct
+typedef struct tagBITMAPFILEHEADER
 {
     WORD bfType;
     DWORD bfSize;
@@ -23,7 +22,7 @@ BITMAPFILEHEADER;
 
 // information about the dimensions and color format
 // https://msdn.microsoft.com/en-us/library/dd183376(v=vs.85).aspx
-typedef struct
+typedef struct tagBITMAPINFOHEADER
 {
     DWORD biSize;
     LONG biWidth;
@@ -41,7 +40,7 @@ BITMAPINFOHEADER;
 
 // relative intensities of red, green, and blue
 // https://msdn.microsoft.com/en-us/library/dd162939(v=vs.85).aspx
-typedef struct
+typedef struct tagRGBTRIPLE
 {
     BYTE rgbtBlue;
     BYTE rgbtGreen;
