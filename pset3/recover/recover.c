@@ -29,13 +29,13 @@ int main(int argc, char **argv)
     // allocate memory to store filenames
     // and hexadecimal data of JPEG block
     char *filename = malloc(FILENAME_SIZE);
-    unsigned char block[BLOCK_SIZE] = {'\0'};
+    unsigned char *block = malloc(BLOCK_SIZE);
 
     // declare file pointer for JPEG files
     FILE *ofPtr;
 
     // iterate over each block of the RAW input file
-    for (int i = 0; fread(&block, BLOCK_SIZE, 1, ifPtr);)
+    for (int i = 0; fread(block, BLOCK_SIZE, 1, ifPtr);)
     {
         // start new file if JPEG signature is detected
         if (block[0] == 0xff &&
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
         if (i)
         {
             // write the block to the JPEG file
-            fwrite(&block, BLOCK_SIZE, 1, ofPtr);
+            fwrite(block, BLOCK_SIZE, 1, ofPtr);
         }
     }
 
@@ -82,6 +82,7 @@ int main(int argc, char **argv)
 
     // free allocated memory
     free(filename);
+    free(block);
 
     return 0;
 }
