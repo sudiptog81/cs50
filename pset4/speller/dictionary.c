@@ -12,7 +12,7 @@
 #include "dictionary.h"
 
 // represents number of buckets in hashtable
-#define N 65536
+#define N 60000
 
 // declaration of a node of hashtable
 typedef struct node
@@ -27,11 +27,11 @@ node *hashtable[N];
 // counter for number of words in dictionary
 unsigned long count = 0;
 
-// hashes word to a number
+// hashes word to a number to minimize collision
 unsigned int hash(const char *word)
 {
-    // return tolower(word[0]) - 'a';
-    unsigned int hash = 0;
+    // folding hash function
+    unsigned int hash = 256;
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         hash = (hash << 2) ^ (word[i] | 0x20);
@@ -69,7 +69,7 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         n->next = NULL;
 
-        // insert node to the start of the list
+        // handle collisions
         if (hashtable[hashed])
         {
             n->next = hashtable[hashed];

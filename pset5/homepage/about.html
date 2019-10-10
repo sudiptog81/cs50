@@ -1,0 +1,185 @@
+<!--
+  PSet 5 - Homepage
+  Written by Sudipto Ghosh for CS50
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <!-- metadata tags -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title of webpage -->
+    <title>About Me | Sudipto Ghosh</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/duck.png" type="image/x-icon">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- navigation bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- logo -->
+        <a class="navbar-brand" href="/">
+          <span class="icon">&#x1f310;<span class="d-none d-md-inline"> CS50</span></span>
+        </a>
+        <!-- hamburger menu -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- navigation links -->
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                Home
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sudipto.ghosh.pro/" target="_blank">
+                Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.ghosh.pro/" target="_blank">
+                Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hobbies.html">
+                Hobbies
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- hero section -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-4">About Me</h1>
+        </div>
+      </div>
+      <!-- about me container -->
+      <div class="container about-div">
+        <!-- paragraoh introducing myself -->
+        <p class="text-justify container">
+          I am a freshman at the University of Delhi and a self-taught IT enthusiast working towards a Bachelor
+          of Science (Honours) degree in Computer Science and Mathematics. Proficient in front-end web design and
+          back-end development and integration with popular services. Excellent communicator and ready for challenges.
+          Building leadership skills along the way. Fluent in English, Hindi and Bengali. Visual Studio Code and Vim are
+          my preferred code editors. Apart from CS50, currently taking Andrew Ng's ML & AI course and implementing the
+          same in Python. I use Arch and Windows, btw.
+        </p>
+        <!-- grid listing proficiencies -->
+        <div class="text-center">
+          <h2 class="display-4">Skills</h2>
+          <div id="skills-grid">
+            <div class="skills-grid-element">
+              <div class="skill-text">HTML5</div>
+              <div class="skill-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">CSS3</div>
+              <div class="skill-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">ES6 JS</div>
+              <div class="skill-progress container">
+                <div class="progress">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">PHP</div>
+              <div class="skill-progress container">
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">NGINX</div>
+              <div class="skill-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">LINUX</div>
+              <div class="skill-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">CLOUD</div>
+              <div class="skill-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills-grid-element">
+              <div class="skill-text">REACT</div>
+              <div class="skill-progress">
+                <div class="progress">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Developed for CS50x 2019</span>
+      </div>
+    </footer>
+    <!-- external javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

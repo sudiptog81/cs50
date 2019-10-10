@@ -1,0 +1,105 @@
+/**
+ * PSet 5 - Homepage
+ * Written by Sudipto Ghosh for CS50
+ */
+
+/* floating images */
+
+img.pull-left,
+img.pull-right {
+  max-width: 100%;
+  position: absolute;
+  width: 10%;
+}
+
+img.pull-left {
+  left: 7em;
+  top: 7em;
+}
+
+img.pull-right {
+  right: 7em;
+  top: 7.5em;
+}
+
+/* social media links */
+
+.fab {
+  font-size: xx-large;
+  margin-top: 8px;
+}
+
+#social-grid {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  padding: 0.75em 0;
+  text-align: center;
+  gap: 2em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+#social-grid > .social-grid-element {
+  border: 1px solid gray;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.social-grid-element > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  font-size: 2em;
+  text-transform: uppercase;
+  transition: 100;
+}
+
+#gh:hover, #gh:focus {
+  color: #ffffff;
+  background-color: #222222;
+  transition: 100;
+}
+
+#ig:hover, #ig:focus {
+  color: #ffffff;
+  background: #d6249f;
+  background: radial-gradient(circle at -50% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  transition: 100;
+}
+
+#fb:hover, #fb:focus {
+  color: #ffffff;
+  background-color: #4267b2;
+  transition: 100;
+}
+
+#tw:hover, #tw:focus {
+  color: #ffffff;
+  background-color: #1da1f2;
+  transition: 100;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {  
+  img.pull-right,
+  img.pull-left {
+    display: none;
+  }
+
+  #social-grid {
+    width: 90%;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .social-grid-element > div {
+    font-size: 1.7em;
+  }
+
+  .fab {
+    margin-top: 5px;
+  }
+}
