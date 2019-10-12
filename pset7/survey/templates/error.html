@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block main %}
+
+<!--
+  PSet 7.2 - Survey
+  Written by Sudipto Ghosh for CS50
+-->
+
+<div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Error</h4>
+  <hr />
+  {% for f in failure %}
+  <p>{{ f }}</p>
+  {% endfor %}
+</div>
+
+{% endblock %}
